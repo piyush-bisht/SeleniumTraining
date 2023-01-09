@@ -28,7 +28,7 @@ public class DemoTest {
         inputBox.sendKeys("FIS"+ Keys.ENTER);
 //        searchButton.click();
 
-        driver.close();
+        //driver.close();
 
 
 
