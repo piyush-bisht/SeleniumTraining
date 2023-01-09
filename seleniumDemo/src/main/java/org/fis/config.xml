@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" parallel="tests" >
+    <test name="test node1" >
+        <classes>
+            <class name="org.fis.GridDemo" />
+        </classes>
+    </test>
+    <test name="test node2" >
+        <classes>
+            <class name="org.fis.GridDemo2" />
+        </classes>
+    </test>
+</suite>
+
+

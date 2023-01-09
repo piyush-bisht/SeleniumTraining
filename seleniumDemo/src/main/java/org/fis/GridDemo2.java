@@ -14,14 +14,14 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GridDemo {
+public class GridDemo2 {
 
     WebDriver driver;
     String baseURL, nodeURL;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
-        baseURL = "https://www.fisglobal.com/en";
+        baseURL = "https://www.amazon.in";
         nodeURL = "http://192.168.137.1:4444/";
         ChromeOptions chromeOptions=new ChromeOptions();
 
@@ -33,27 +33,19 @@ public class GridDemo {
     public void afterTest() {
         driver.quit();
     }
+
     @Test
     public void sampleTest() {
         driver.get(baseURL);
 
 
-        if(driver.getTitle().contains("FIS"))
-            Assert.assertTrue(true,"Correct Site Found");
-        else
-            Assert.assertTrue(false,"Wrong Site");
-
-
-    }
-
-    @Test
-    public void sampleTest2(){
-
-        driver.get("https://amazon.in");
         if(driver.getTitle().contains("Amazon"))
             Assert.assertTrue(true,"Correct Site Found");
         else
             Assert.assertTrue(false,"Wrong Site");
+
+
     }
+
 
 }
